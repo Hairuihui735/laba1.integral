@@ -34,7 +34,7 @@ namespace laba1.integral
             int count = Convert.ToInt32(tbCount.Text);
 
             Icalculator calculatorIntegral = GetCalculator();
-            double answer = calculatorIntegral.Calculate(lowerBound, upperBound, count, x => (2*x)-Math.Log(2*x)+234;
+            double answer = calculatorIntegral.Calculate(lowerBound, upperBound, count, x => (2*x)-Math.Log(2*x)+234);
             tbAnswer.Text = answer.ToString();
         }
 
@@ -47,7 +47,7 @@ namespace laba1.integral
                 case 1:
                     return new TrapCalculator();
                 default:
-                    return new SimpsonleCalculator();
+                    return new SimpsonCalculator();
             }
 
         }

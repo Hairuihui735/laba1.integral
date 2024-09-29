@@ -31,7 +31,7 @@
         <Button Name="btnCalculate" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Click="btnCalculate_Click">Посчитать</Button>
         <TextBlock Grid.Row="4" Grid.Column="1"> Метод рассчёта</TextBlock>
         <ComboBox Name="cmbBoxIntegralType" Margin="10 0 0 0" Grid.Row="4"  Grid.Column="2">
-            <ComboBoxItem>Метод прямоугольника</ComboBoxItem>
+            <ComboBoxItem>Метод Симпсона</ComboBoxItem>
             <ComboBoxItem>Метод трапеции</ComboBoxItem>
         </ComboBox>
         <TextBlock Grid.Row="6" Grid.Column="1">Ответ:</TextBlock>
