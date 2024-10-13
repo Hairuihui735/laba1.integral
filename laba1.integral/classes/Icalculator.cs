@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace laba1.integral.classes
 {
-    internal interface Icalculator
+    public interface Icalculator
     {
         double Calculate(double lower, double upper, int count, Func<double, double> func);
     }

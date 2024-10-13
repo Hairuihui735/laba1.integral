@@ -10,6 +10,10 @@ namespace laba1.integral.classes
     {
         public double Calculate(double lower, double upper, int count, Func<double, double> func)
         {
+            if (count <= 0) 
+            {
+                throw new ArgumentException("количество разбиений должно быть больше 0");
+            }
             double partlength = (upper - lower) / count;
             double answer = 0;
             double x0 = lower;

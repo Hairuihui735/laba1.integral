@@ -14,25 +14,28 @@ namespace laba1.integral.classes
             {
                 throw new ArgumentException("Количество подынтервалов должно быть четным.");
             }
+            if (count <= 0)
+            {
+                throw new ArgumentException("количество разбиений должно быть больше 0");
+            }
 
             double partLength = (upper - lower) / count;
-            double answer = func(lower) + func(upper); // Начинаем с крайних значений
+            double answer = func(lower) + func(upper); 
 
-            // Суммируем значения функции на нечетных индексах
             for (int i = 1; i < count; i += 2)
             {
                 double x = lower + i * partLength;
                 answer += 4 * func(x);
             }
 
-            // Суммируем значения функции на четных индексах
+            
             for (int i = 2; i < count - 1; i += 2)
             {
                 double x = lower + i * partLength;
                 answer += 2 * func(x);
             }
 
-            answer *= partLength / 3; // Умножаем на h/3
+            answer *= partLength / 3; 
             return answer;
         }
     }
